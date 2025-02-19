@@ -1,0 +1,23 @@
+
+:root {
+    --lightsand: #F4E1C1;
+    --darksand: #D0B27A;
+    --lightsage: #A9B8A0;
+    --darksage: #7A8F7D;
+    --cream: #F0F0F0;
+    --grey: #B3B3B3;
+  }
+
+.container-fluid {
+ background-color: var(--lightsage);
+ color: var(--darksage);
+}
+
+.dataEntry {
+    background-color: var(--cream);
+}
+
+.userData {
+ background-color: var(--cream);
+}
+

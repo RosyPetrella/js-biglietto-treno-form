@@ -30,19 +30,23 @@ const pricePerKm = 0.21;
 const discountMinor = 0.21 - (pricePerKm * 20) / 100;
 const discountSenior = 0.21 - (pricePerKm * 40) / 100;
 
+let priceAdult = "";
+let priceMinor = "";
+let priceSenior = "";
+
 btnCalcEl.addEventListener("click", function () {
   const km = parseInt(kmEl.value);
   const age = ageEl.value;
   if (ageEl.value === "adult") {
-    const priceAdult = (km * pricePerKm).toFixed(2);
+    priceAdult = (km * pricePerKm).toFixed(2);
     alert("Il costo del biglietto è di € " + priceAdult);
     return priceAdult;
   } else if (ageEl.value === "minor") {
-    const priceMinor = (km * discountMinor).toFixed(2);
+    priceMinor = (km * discountMinor).toFixed(2);
     alert("Il costo del biglietto è di € " + priceMinor);
     return priceMinor;
   } else if (ageEl.value === "senior") {
-    const priceSenior = (km * discountSenior).toFixed(2);
+    priceSenior = (km * discountSenior).toFixed(2);
     alert("Il costo del biglietto è di € " + priceSenior);
     return priceSenior;
   }

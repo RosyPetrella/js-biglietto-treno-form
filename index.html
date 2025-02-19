@@ -8,16 +8,51 @@
   </head>
   <body>
     <div>
-      <input id="km" type="number" placeholder="Inserire n. km" required />
+      <div class="dataEntry">
+        <form action="">
+          <div class="container">
+            <label for="">Nome</label>
+            <input
+              id="userName"
+              type="text"
+              placeholder="Inserire nome passeggero"
+            />
+          </div>
+          <div>
+            <label for="">Selezionare fascia d'età</label>
+            <select name="age" id="age">
+              <option value="minor">Minore di 18 anni</option>
+              <option value="adult">Adulto</option>
+              <option value="senior">Over 65</option>
+            </select>
+          </div>
+          <div>
+            <label for="">Inserire numero di Km da percorrere</label>
+            <input id="km" type="number" placeholder="N. km" required />
+          </div>
+
+          <button id="calculator" type="button">Calcola il prezzo</button>
+          <button id="send" type="submit">Acquista</button>
+        </form>
+      </div>
+      <div class="userData">
+        <div class="card">
+          <h2>Dettagli passeggero</h2>
+          <div>
+            <h3>Nome passeggero</h3>
+            <span class="passengerName"></span>
+          </div>
+          <div>
+            <h3>Tipo di biglietto</h3>
+            <span class="typeOfTicket"></span>
+          </div>
+          <div>
+            <h3>Costo biglietto</h3>
+            <span class="ticketPrice"></span>
+          </div>
+        </div>
+      </div>
     </div>
-    <div>
-      <select name="age" id="age">
-        <option id="minor" value="minor">Minore di 18 anni</option>
-        <option id="adult" value="adult">Adulto</option>
-        <option id="senior" value="senior">Over 65</option>
-      </select>
-    </div>
-    <button type="submit">Acquista</button>
     <script src="main.js"></script>
   </body>
 </html>

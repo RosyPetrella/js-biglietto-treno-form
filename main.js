@@ -21,15 +21,15 @@ const discountSenior = 0.21 - (pricePerKm * 40) / 100;
 
 btnEl.addEventListener("click", function () {
   const km = parseInt(kmEl.value);
-  const age = parseInt(ageEl.value);
-  if (age >= 18 && age < 65) {
-    const priceAdult = km * pricePerKm;
+  const age = ageEl.value;
+  if (ageEl.value === "adult") {
+    const priceAdult = (km * pricePerKm).toFixed(2);
     console.log(priceAdult);
-  } else if (age < 18) {
-    const priceMinor = km * discountMinor;
+  } else if (ageEl.value === "minor") {
+    const priceMinor = (km * discountMinor).toFixed(2);
     console.log(priceMinor);
-  } else {
-    const priceSenior = km * discountSenior;
+  } else if (ageEl.value === "senior") {
+    const priceSenior = (km * discountSenior).toFixed(2);
     console.log(priceSenior);
   }
 });

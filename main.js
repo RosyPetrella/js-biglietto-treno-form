@@ -52,4 +52,11 @@ formEl.addEventListener("submit", function (e) {
   e.preventDefault();
   passengerNameEl.innerHTML = nameEl.value;
   typeOfTicketEl.innerHTML = ageEl.value;
+  if (ageEl.value === "adult") {
+    ticketPriceEl.innerHTML = priceAdult;
+  } else if (ageEl.value === "minor") {
+    ticketPriceEl.innerHTML = priceMinor;
+  } else if (ageEl.value === "senior") {
+    ticketPriceEl.innerHTML = priceSenior;
+  }
 });
